@@ -760,7 +760,7 @@ class MainMenuState extends MusicBeatState
 		}
 		else
 		{
-			if (FlxG.keys.justPressed.ESCAPE)
+			if (FlxG.keys.justPressed.ESCAPE || virtualPad.buttonB.justPressed)
 			{
 				selectingDiff = false;
 				listOfButtons[0].highlight();
@@ -795,7 +795,7 @@ class MainMenuState extends MusicBeatState
 				}
 				
 	
-				if (FlxG.keys.justPressed.ENTER)
+				if (FlxG.keys.justPressed.ENTER || virtualPad.buttonA.justPressed)
 				{
 					selectedSmth = false;
 					listOfDiffButtons[diffSelectedIndex].select();
