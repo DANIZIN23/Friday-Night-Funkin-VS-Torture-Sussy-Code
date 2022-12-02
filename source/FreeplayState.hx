@@ -100,6 +100,10 @@ class FreeplayState extends MusicBeatState
 
 		add(diffAndScore);
 
+		#if android
+		addVirtualPad(FULL, A_B);
+		#end	
+		
 		var menuShade:FlxSprite = new FlxSprite(-1350,-1190).loadGraphic(Paths.image("menu/freeplay/Menu Shade","torture"));
 		menuShade.setGraphicSize(Std.int(menuShade.width * 0.7));
 		add(menuShade);
