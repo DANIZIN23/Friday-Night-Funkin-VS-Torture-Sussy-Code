@@ -190,12 +190,12 @@ class FreeplayState extends MusicBeatState
 				FlxG.switchState(new MainMenuState());
 			}
 
-			if (FlxG.keys.justPressed.RIGHT)
+			if (controls.RIGHT_P)
 			{
 				FlxG.sound.play(Paths.sound('Hover','torture'));
 				diff += 1;
 			}
-			if (FlxG.keys.justPressed.LEFT)
+			if (controls.LEFT_P)
 			{
 				FlxG.sound.play(Paths.sound('Hover','torture'));
 				diff -= 1;
@@ -206,7 +206,7 @@ class FreeplayState extends MusicBeatState
 			if (diff < 0)
 				diff = 2;
 
-			if (FlxG.keys.justPressed.DOWN)
+			if (controls.DOWN_P)
 				{
 					if (selectedIndex + 1 < songs.length)
 					{
@@ -227,7 +227,7 @@ class FreeplayState extends MusicBeatState
 						trace('selected ' + selectedIndex);
 					}
 				}
-				if (FlxG.keys.justPressed.UP)
+				if (controls.UP_P)
 				{
 					if (selectedIndex > 0)
 					{
@@ -250,7 +250,7 @@ class FreeplayState extends MusicBeatState
 				}
 			
 	
-			if (FlxG.keys.justPressed.ENTER && !selectedSmth)
+			if (FlxG.keys.justPressed.A && !selectedSmth)
 			{
 				selectedSmth = true;
 				songs[selectedIndex].select();
