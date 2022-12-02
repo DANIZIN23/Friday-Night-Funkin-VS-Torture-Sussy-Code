@@ -479,7 +479,7 @@ class MainMenuState extends MusicBeatState
 		listOfButtons[selectedIndex].highlight();
 
 		#if android
-		addVirtualPad(UP_DOWN, A_B);
+		addVirtualPad(LEFT_RIGHT, A_B);
 		#end	
 		
 		super.create();
@@ -720,7 +720,7 @@ class MainMenuState extends MusicBeatState
 					trace('selected ' + selectedIndex);
 				}
 			}
-			if (FlxG.keys.justPressed.LEFT)
+			if (controls.LEFT_P)
 			{
 				if (show == 'sus' && !killed && hand.alpha == 1)
 					FlxTween.tween(hand, {alpha: 0, x: shower.x + 60, y: shower.y + 60}, 0.6, {ease: FlxEase.expoInOut});
@@ -781,7 +781,7 @@ class MainMenuState extends MusicBeatState
 					else
 						trace('CANT select ' + diffSelectedIndex);
 				}
-				if (FlxG.keys.justPressed.LEFT)
+				if (controls.RIGHT_P)
 				{
 					if (diffSelectedIndex > 0)
 					{
