@@ -745,7 +745,7 @@ class MainMenuState extends MusicBeatState
 			}
 			
 
-			if (FlxG.keys.justPressed.ENTER && !selectedSmth)
+			if (controls.ACCEPT && !selectedSmth)
 			{
 				if (show == 'sus' && !killed)
 				{
@@ -781,7 +781,7 @@ class MainMenuState extends MusicBeatState
 					else
 						trace('CANT select ' + diffSelectedIndex);
 				}
-				if (FlxG.keys.justPressed.LEFT)
+				if (controls.LEFT_P)
 				{
 					if (diffSelectedIndex > 0)
 					{
