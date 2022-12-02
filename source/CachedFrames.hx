@@ -104,7 +104,7 @@ class CachedFrames
     public function loadFrames()
     {
         sys.thread.Thread.create(() -> {
-            toBeLoaded.set('sign','fourth/mech/Sign_Post_Mechanic');
+            /*toBeLoaded.set('sign','fourth/mech/Sign_Post_Mechanic');
             toBeLoaded.set('left','hellclwn/Tricky/Left');
             toBeLoaded.set('right','hellclwn/Tricky/right');
             toBeLoaded.set('up','hellclwn/Tricky/Up');
