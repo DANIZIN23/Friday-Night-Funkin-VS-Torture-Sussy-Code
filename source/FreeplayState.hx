@@ -183,7 +183,7 @@ class FreeplayState extends MusicBeatState
 				score = Highscore.getScore(songs[selectedIndex].pognt,2);
 			diffAndScore.text = diffGet() + " - " + score; 
 
-			if (FlxG.keys.justPressed.ESCAPE || _virtualPad.buttonB.justPressed && !selectedSmth)
+			if (controls.BACK && !selectedSmth)
 			{
 				selectedSmth = true;
 				MainMenuState.curDifficulty = diff;
@@ -250,7 +250,7 @@ class FreeplayState extends MusicBeatState
 				}
 			
 	
-			if (FlxG.keys.justPressed.ENTER || _virtualPad.buttonA.justPressed && !selectedSmth)
+			if (controls.ACCEPT && !selectedSmth)
 			{
 				selectedSmth = true;
 				songs[selectedIndex].select();
