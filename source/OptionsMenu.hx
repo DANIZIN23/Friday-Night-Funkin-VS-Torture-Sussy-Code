@@ -22,6 +22,7 @@ class OptionsMenu extends MusicBeatState
 	var options:Array<OptionCatagory> = [
 		new OptionCatagory("Gameplay", [
 			new DFJKOption(controls),
+			new AndroidControls(),
 			new GhostTapOption("Ghost Tapping is when you tap a direction and it doesn't give you a miss."),
 			#if desktop
 			new FPSCapOption("Cap your FPS (Left for -10, Right for +10. SHIFT to go faster)"),
@@ -104,6 +105,10 @@ class OptionsMenu extends MusicBeatState
 		menuShade.setGraphicSize(Std.int(menuShade.width * 0.7));
 		add(menuShade);
 
+		#if android
+		addVirtualPad(FULL, A_B);
+		#end
+    
 		super.create();
 	}
 
@@ -157,9 +162,9 @@ class OptionsMenu extends MusicBeatState
 				curSelected = 0;
 				currentOptions[curSelected].color = FlxColor.WHITE;
 			}
-			if (FlxG.keys.justPressed.UP)
+			if (controls.UP_P)
 				changeSelection(-1);
-			if (FlxG.keys.justPressed.DOWN)
+			if (controls.DOWN_P)
 				changeSelection(1);
 			
 			if (isCat)
