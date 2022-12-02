@@ -769,7 +769,7 @@ class MainMenuState extends MusicBeatState
 				selectedSmth = false;
 			}
 
-			if (FlxG.keys.justPressed.RIGHT)
+			if (controls.RIGHT_P)
 				{
 					if (diffSelectedIndex + 1 < listOfDiffButtons.length)
 					{
@@ -781,7 +781,7 @@ class MainMenuState extends MusicBeatState
 					else
 						trace('CANT select ' + diffSelectedIndex);
 				}
-				if (controls.RIGHT_P)
+				if (FlxG.keys.justPressed.LEFT)
 				{
 					if (diffSelectedIndex > 0)
 					{
