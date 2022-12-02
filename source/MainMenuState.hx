@@ -478,6 +478,10 @@ class MainMenuState extends MusicBeatState
 
 		listOfButtons[selectedIndex].highlight();
 
+		#if android
+		addVirtualPad(UP_DOWN, A_B);
+		#end	
+		
 		super.create();
 	}
 
