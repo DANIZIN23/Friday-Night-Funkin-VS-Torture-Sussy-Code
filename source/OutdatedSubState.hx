@@ -31,7 +31,7 @@ class OutdatedSubState extends MusicBeatState
 
 	override function update(elapsed:Float)
 	{
-		if (controls.ACCEPT)
+		if (controls.ACCEPT #if android || FlxG.android.justReleased.BACK #end)
 		{
 			FlxG.openURL("https://github.com/KadeDev/Kade-Engine/releases/latest");
 		}
